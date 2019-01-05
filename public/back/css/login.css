@@ -130,4 +130,16 @@ a:focus {
      color: red;
 }
 
+.lt_content {
+    padding: 15px;
+}
+.echarts_left,
+.echarts_right {
+     height: 400px;
+     width: 48%;
+}
+.echarts_right {
+    background: #3C8DBC;
+}
+
 

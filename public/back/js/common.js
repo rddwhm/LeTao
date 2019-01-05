@@ -5,9 +5,12 @@ $(document).ajaxStart(function () {
   // console.log("ajaxStart在开始一个ajax请求时触发");
     NProgress.start();
 });
-$(document).ajaxStart(function () {
+$(document).ajaxStop(function () {
   // console.log("ajaxStart在开始一个ajax请求时触发");
-      NProgress.done();
+  setTimeout(function(){
+     
+    NProgress.done();
+  },500)
 });
 
 
@@ -24,8 +27,25 @@ $(function(){
            $('.lt_topbar').toggleClass("hidemenu");
      })
 
-     // 退出功能
+     // 退出功能(显示模态框)
      $(".icon_logout").click(function(){
+          // 让模态框显示隐藏
          $('#myModal').modal("show");
+     })
+
+
+     // 退出登录功能
+     $('.logoin_out').click(function(){
+           $.ajax({
+                type: 'get',
+                url: '/employee/employeeLogout',
+                dataType: 'json',
+                success: function(info){
+                      alert(1);
+                       if(info.success){
+                            location.href = 'login.html';      
+                       }
+                }
+           })
      })
 })
