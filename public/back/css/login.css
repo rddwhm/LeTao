@@ -98,7 +98,6 @@ a:focus {
     height: 2000px;
     padding-left: 180px;
     padding-top: 50px;
-    background: pink;
     transition: all 1s;  
 }
 .lt_main.hidemenu {
@@ -138,8 +137,17 @@ a:focus {
      height: 400px;
      width: 48%;
 }
-.echarts_right {
-    background: #3C8DBC;
+
+.breadcrumb .active {
+    color: #777;
+}
+
+.table>thead>tr>th {
+   text-align: center;
+}
+.table>tbody>tr>td {
+    vertical-align: middle;
+    text-align: center; 
 }
 
 
